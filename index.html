@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./components/style/style.css">
+    <link rel="shortcut icon" href="./components/res/icon/sun.svg" type="image/x-icon">
+    <title>Clima</title>
+</head>
+<body>
+    <div class="background-content" id="background-content">
+        <header id="index-info-header">
+            <div class="left-side">
+                <img src="./components/res/icon/sun.svg" alt="Sol">
+                <div class="lft-txt" style="display: none;">
+                    <h1>Clima</h1>
+                    <h3>Veja o clima local em sua cidade!</h3>
+                </div>
+            </div>
+            <div class="middle-side" style="display: none;">
+                <img src="./components/res/icon/map-mark.svg" alt="Marcação de Mapa">
+                <input type="text">
+            </div>
+            <div class="right-side">
+                <button id="api-key-caller-btn">Chave API</button>
+                <button>Configurações</button>
+            </div>
+        </header>
+        <header id="all-info-header" style="display: none;">
+            <div class="left-side">
+                <img src="./components/res/icon/sun.svg" alt="Sol">
+                <div class="lft-txt">
+                    <h1>Clima</h1>
+                    <h3>Veja o clima local em sua cidade!</h3>
+                </div>
+            </div>
+            <div class="middle-side">
+                <img src="./components/res/icon/map-mark.svg" alt="Marcação de Mapa">
+                <input type="text" name="cityName" id="cityName">
+            </div>
+            <div class="right-side">
+                <button id="api-key-caller-btn">Chave API</button>
+                <button>Configurações</button>
+            </div>
+        </header>
+        <main id="index-style-main">
+            <div class="body-index-header">
+                <div class="bih-splash-txt">
+                    <img src="./components/res/icon/sun.svg" alt="Sol">
+                    <h1>Clima</h1>
+                </div>
+                <h3>Veja o clima local em sua cidade!</h3>
+            </div>
+            <div class="body-index-content">
+                <div class="city-name-entry">
+                    <input type="text" name="city-name" id="city-name-id" placeholder="Digite o nome de sua cidade">
+                </div>
+            </div>
+        </main>
+        <footer>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ratione temporibus id ab sequi quia atque accusantium ipsam, quibusdam nostrum, similique voluptate vero voluptatum cum doloribus odio sint. Earum, amet!
+        </footer>
+    </div>
+    <div id="api-key-pop">
+        <div class="api-key-pop-title">
+            <h2>Chave API</h2>
+        </div>
+        <div class="api-key-pop-subconfig">
+            <img src="./components/res/icon/key.svg" alt="Chave">
+            <div class="akps-flex">
+                <b>Insira a sua chave API privada (OpenWeather)</b>
+                <input type="password" id="api-key-input-get" minlength="8">
+            </div>
+        </div>
+        <div class="api-key-pop-subconfig hoverable-config" id="api-key-callback">
+            <img src="./components/res/icon/arrow-hook.svg" alt="Chave">
+            <div class="akps-flex">
+                <b>Voltar</b>
+            </div>
+        </div>
+    </div>
+    <div id="global-error-pop">
+        <div class="api-key-pop-title">
+            <h2>Erro</h2>
+        </div>
+        <div class="api-key-pop-subconfig">
+            <img src="./components/res/icon/issue.svg" alt="Chave">
+            <div class="akps-flex">
+                <b id="error-title">Null Title</b>
+                <p id="error-body">Null Body</p>
+            </div>
+        </div>
+        <button id="error-confirm">Ok</button>
+    </div>
+    <script src="./components/script/gui.js"></script>
+</body>
+</html>
