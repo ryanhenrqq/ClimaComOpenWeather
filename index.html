@@ -29,7 +29,7 @@
         <header id="all-info-header" style="display: none;">
             <div class="left-side">
                 <img src="./components/res/icon/sun.svg" alt="Sol">
-                <div class="lft-txt">
+                <div class="lft-txt" onclick='setUserGui("content", "index")'>
                     <h1>Clima</h1>
                     <h3>Veja o clima local em sua cidade!</h3>
                 </div>
@@ -43,7 +43,7 @@
                 <button>Configurações</button>
             </div>
         </header>
-        <main id="index-style-main">
+        <main id="index-style-main" class="index-style-main">
             <div class="body-index-header">
                 <div class="bih-splash-txt">
                     <img src="./components/res/icon/sun.svg" alt="Sol">
@@ -54,12 +54,32 @@
             <div class="body-index-content">
                 <div class="city-name-entry">
                     <input type="text" name="city-name" id="city-name-id" placeholder="Digite o nome de sua cidade">
+                    <img src="./components/res/icon/map-mark.svg" alt="Marcação de Mapa">
                 </div>
             </div>
         </main>
-        <footer>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ratione temporibus id ab sequi quia atque accusantium ipsam, quibusdam nostrum, similique voluptate vero voluptatum cum doloribus odio sint. Earum, amet!
-        </footer>
+        <main id="content-style-main" class="content-style-main" style="display: none;">
+            <div class="left-panel">
+                <div class="degrees">
+                    <div class="big-degrees">
+                        <img src="" alt="">
+                        <b class="bd-main" id="average-degree"></b>
+                        <div class="bd-rightpanel">
+                            <b id="max-degree"></b>
+                            <b id="min-degree"></b>
+                            <b id="average-fah"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="rp-title">
+                    <img src="./components/res/icon/map-mark.svg" alt="Marcação de Mapa">
+                    <h2>Informações do Local</h2>
+                </div>
+            </div>
+            
+        </main>
     </div>
     <div id="api-key-pop">
         <div class="api-key-pop-title">
@@ -79,12 +99,12 @@
             </div>
         </div>
     </div>
-    <div id="global-error-pop">
+    <div id="global-error-pop" class="global-error-pop">
         <div class="api-key-pop-title">
             <h2>Erro</h2>
         </div>
         <div class="api-key-pop-subconfig">
-            <img src="./components/res/icon/issue.svg" alt="Chave">
+            <img src="./components/res/icon/issue.svg" alt="Erro">
             <div class="akps-flex">
                 <b id="error-title">Null Title</b>
                 <p id="error-body">Null Body</p>
@@ -92,6 +112,21 @@
         </div>
         <button id="error-confirm">Ok</button>
     </div>
+    <div id="global-info-pop" class="global-error-pop">
+        <div class="api-key-pop-title">
+            <h2>Informação</h2>
+        </div>
+        <div class="api-key-pop-subconfig">
+            <img src="./components/res/icon/dialog.svg" alt="Informação">
+            <div class="akps-flex">
+                <b id="info-title">Null Title</b>
+                <p id="info-body">Null Body</p>
+            </div>
+        </div>
+        <button id="info-confirm">Ok</button>
+    </div>
+    
     <script src="./components/script/gui.js"></script>
+    <script src="./components/script/request.js"></script>
 </body>
 </html>
