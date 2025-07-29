@@ -18,8 +18,6 @@
                 </div>
             </div>
             <div class="middle-side" style="display: none;">
-                <img src="./components/res/icon/map-mark.svg" alt="Marcação de Mapa">
-                <input type="text">
             </div>
             <div class="right-side">
                 <button id="api-key-caller-btn">Chave API</button>
@@ -35,8 +33,6 @@
                 </div>
             </div>
             <div class="middle-side">
-                <img src="./components/res/icon/map-mark.svg" alt="Marcação de Mapa">
-                <input type="text" name="cityName" id="cityName">
             </div>
             <div class="right-side">
                 <button id="api-key-caller-btn">Chave API</button>
@@ -59,26 +55,49 @@
             </div>
         </main>
         <main id="content-style-main" class="content-style-main" style="display: none;">
-            <div class="left-panel">
-                <div class="degrees">
-                    <div class="big-degrees">
-                        <img src="" alt="">
-                        <b class="bd-main" id="average-degree"></b>
-                        <div class="bd-rightpanel">
-                            <b id="max-degree"></b>
-                            <b id="min-degree"></b>
-                            <b id="average-fah"></b>
+            <div class="top-content-view">
+                <div class="left-panel">
+                    <div class="degrees">
+                        <div class="big-degrees">
+                            <img src="" alt="">
+                            <b class="bd-main" id="average-degree"></b>
+                            <div class="bd-rightpanel">
+                                <b id="max-degree"></b>
+                                <b id="min-degree"></b>
+                                <b id="average-fah"></b>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="right-panel">
-                <div class="rp-title">
-                    <img src="./components/res/icon/map-mark.svg" alt="Marcação de Mapa">
-                    <h2>Informações do Local</h2>
+                <div class="right-panel">
+                    <div class="rp-title">
+                        <img src="./components/res/icon/map-mark.svg" alt="Marcação de Mapa">
+                        <h2>Informações do Local</h2>
+                    </div>
+                    <div class="rp-info">
+                        <img src="./components/res/icon/navigate.svg" alt="Cidade" class="gps-ico">
+                        <p id="cidade-nome"></p>
+                    </div>
+                    <div class="rp-info">
+                        <img src="./components/res/icon/globe.svg" alt="Cidade">
+                        <p id="estado-pais"></p>
+                    </div>
+                    <div class="rp-info">
+                        <img src="./components/res/icon/clock-alt.svg" alt="Cidade" class="clock-ico">
+                        <p id="horario-local" style="font-weight: bold;"></p>
+                    </div>
+                    <div class="rp-timeinfo">
+                        <div class="rp-info">
+                            <img src="./components/res/icon/daytime-sunrise.svg" alt="Cidade">
+                            <p id="sunrise-time">05h00</p>
+                        </div>
+                        <div class="rp-info">
+                            <img src="./components/res/icon/daytime-sunset.svg" alt="Cidade">
+                            <p id="sunset-time">19h00</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
+            </div>       
         </main>
     </div>
     <div id="api-key-pop">

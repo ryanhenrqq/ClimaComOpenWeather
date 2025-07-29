@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         console.log("tem algo gravado no gui!")
         if (guiId != "index") {
-            setUserGui(guiId, "all")
+            setUserGui(guiId, "index")
         }
     }
 
@@ -42,7 +42,9 @@ apiKeyCallerBtn.addEventListener("click", function() {
 
 const cityEntryInput = document.getElementById("city-name-id")
 cityEntryInput.addEventListener("keydown", (e) => {
+    
     if (e.key === "Enter") {
+        cityEntryInput.disabled = true
         fetchCoords(cityEntryInput)
     }
 })
@@ -100,10 +102,12 @@ function setUserGui(state, target) {
     localStorage.setItem("gui-state", target)
 
     if (target == "index") {
+        cityEntryInput.disabled = false
         all_head.style.display = "none"
         content_main.style.display = "none"
         index_head.style.display = "flex"
         index_main.style.display = "flex"
+        input.disabled = false
     } else {
         all_head.style.display = "flex"
         content_main.style.display = "flex"

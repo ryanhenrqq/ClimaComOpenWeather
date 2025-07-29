@@ -43,6 +43,7 @@ body {
     align-items: center;
     justify-content: center;
     filter: invert(100);
+    animation: spin 25s linear infinite;
 }
 .lft-txt {
     display: flex;
@@ -107,6 +108,11 @@ body {
     width: 200px;
     height: 200px;
     filter: invert(100);
+    animation: spin 40s linear infinite;
+    transition: filter 0.3s linear;
+}
+.bih-splash-txt img:hover {
+    filter: drop-shadow(3px 3px 6px #fff);
 }
 .bih-splash-txt h1{
     font-size: 128px;
@@ -137,13 +143,22 @@ body {
 
 .content-style-main {
     display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: #000000;
+}
+.top-content-view {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffffff;
-    color: #000000;
     width: 100%;
     gap: 12px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
 }
 .big-degrees{
     display: flex;
@@ -164,7 +179,27 @@ body {
     height: 30px;
     margin-right: 10px;
 }
-
+.rp-title, .rp-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.rp-title img, .rp-info img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.rp-timeinfo {
+    margin-top: 40px;
+}
+.clock-ico {
+    animation: spin 10s linear infinite;
+}
+.gps-ico {
+    animation: dopegps 8s linear infinite;
+}
 
 
 footer {
@@ -257,4 +292,17 @@ footer {
     overflow: hidden;
     text-overflow: ellipsis;
     gap: 8px;   
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(359deg);
+    }
+}
+@keyframes dopegps {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(90deg); }
+    100% { transform: rotate(0deg); }
 }
