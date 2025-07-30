@@ -292,6 +292,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .right-side {
+        padding-right: 5px;
+    }
     #all-info-header .left-side .lft-txt {
         display: none;
     }
@@ -325,6 +331,28 @@ footer {
         text-overflow: ellipsis;
     }
     
+}
+
+@media (max-width: 530px) {
+    body {
+        overflow-x: hidden;
+    }
+    .right-side {
+        padding-right: 5px;
+    }
+    .bih-splash-txt {
+        flex-direction: column;
+    }
+    .bih-splash-txt img{
+        width: 80px;
+        height: 80px;
+    }
+    .bih-splash-txt h1 {
+        font-size: 64px;
+    }
+    .body-index-header h3 {
+        font-size: 26px;
+    }
 }
 
 @keyframes spin {
