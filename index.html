@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./components/style/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ClimaOpenWeather">
+    <meta name="apple-touch-icon" content="./components/res/icon/sun.svg">
     <link rel="shortcut icon" href="./components/res/icon/sun.svg" type="image/x-icon">
     <title>Clima</title>
 </head>
@@ -26,7 +32,7 @@
         </header>
         <header id="all-info-header" style="display: none;">
             <div class="left-side">
-                <img src="./components/res/icon/sun.svg" alt="Sol">
+                <img src="./components/res/icon/sun.svg" alt="Sol" onclick='setUserGui("content", "index")'>
                 <div class="lft-txt" onclick='setUserGui("content", "index")'>
                     <h1>Clima</h1>
                     <h3>Veja o clima local em sua cidade!</h3>

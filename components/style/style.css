@@ -291,6 +291,42 @@ footer {
     gap: 8px;   
 }
 
+@media (max-width: 768px) {
+    #all-info-header .left-side .lft-txt {
+        display: none;
+    }
+    .bih-splash-txt img{
+        width: 120px;
+        height: 120px;
+    }
+    .body-index-header h3 {
+        font-size: 34px;
+    }
+
+    .top-content-view {
+        flex-direction: column;
+    }
+    .bd-main {
+        font-size: 85px;
+    }
+
+    .global-error-pop, #api-key-pop {
+        width: 80%;
+        min-height: auto;
+        top: 30%;
+        left: 10%;
+    }
+    .akps-flex {
+        width: 80%;
+    }
+    .akps-flex b, .akps-flex p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+}
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
